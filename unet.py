@@ -48,7 +48,6 @@ class UNet(nn.Module):
         self.out = nn.Conv2d(64, 2, kernel_size=1)
 
     def forward(self, image):
-        # B, C, H, W
         # encoder
         x1 = self.down_conv_1(image)
         x2 = self.max_pool_2x2(x1)
