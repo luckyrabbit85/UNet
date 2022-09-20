@@ -74,11 +74,11 @@ class UNet(nn.Module):
         y = crop_img(x1, x)
         x = self.up_conv_4(torch.cat([x, y], 1))
         x = self.out(x)
-        print(x.size())
         return x
 
 
 if __name__ == '__main__':
     image = torch.rand((1, 1, 572, 572))
     model = UNet()
-    print(model(image))
+    result = model(image)
+    print(result.size())

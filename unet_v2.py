@@ -69,11 +69,11 @@ class UNet(nn.Module):
             feats.pop()
 
         x = self.output_block(x)
-        print(x.shape)
         return x
 
 
 if __name__ == '__main__':
     image = torch.rand((1, 1, 572, 572))
     model = UNet()
-    print(model(image))
+    result = model(image)
+    print(result.size())
