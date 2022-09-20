@@ -25,6 +25,7 @@ class UNet(nn.Module):
         super(UNet, self).__init__()
 
         self.max_pool_2x2 = nn.MaxPool2d(kernel_size=2, stride=2)
+
         self.down_conv_1 = double_conv(1, 64)
         self.down_conv_2 = double_conv(64, 128)
         self.down_conv_3 = double_conv(128, 256)
