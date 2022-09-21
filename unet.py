@@ -22,7 +22,7 @@ def crop_img(tensor, target_tensor):
 
 class UNet(nn.Module):
     def __init__(self) -> None:
-        super(UNet, self).__init__()
+        super().__init__()
 
         self.max_pool_2x2 = nn.MaxPool2d(kernel_size=2, stride=2)
 

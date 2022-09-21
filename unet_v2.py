@@ -22,7 +22,7 @@ def crop_img(tensor, target_tensor):
 
 class UNet(nn.Module):
     def __init__(self) -> None:
-        super(UNet, self).__init__()
+        super().__init__()
 
         self.encoder_blocks = nn.ModuleList([
             nn.Sequential(double_conv(1, 64)),
